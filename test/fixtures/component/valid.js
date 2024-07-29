@@ -1,13 +1,11 @@
-import { h, Component } from 'preact';
+import { h, Component } from "preact";
 
 export class A extends Component {
-	handleClick = () => {};
+  handleClick = () => {};
 
-	renderBlah() {}
+  renderBlah() {}
 
-	render() {
-		return (
-			<div onClick={this.handleClick}>hello</div>
-		);
-	}
+  render() {
+    return <div onClick={this.handleClick}>hello</div>;
+  }
 }

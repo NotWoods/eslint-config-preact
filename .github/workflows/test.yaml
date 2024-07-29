@@ -1,0 +1,20 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts"
+          cache: "npm"
+      - run: npm ci
+      - run: npm run format
+      - run: npm test
+        env:
+          CI: true

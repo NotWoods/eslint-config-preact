@@ -33,7 +33,7 @@ describe.each(FIXTURES)(`Fixture: $name`, (d) => {
     const lintResults = await cli.lintFiles(p("invalid.js"));
     expect(lintResults).toHaveLength(1);
     expect(
-      lintResults[0].errorCount + lintResults[0].warningCount
+      lintResults[0].errorCount + lintResults[0].warningCount,
     ).toBeGreaterThan(0);
 
     const { filePath: _, ...snapshot } = lintResults[0];

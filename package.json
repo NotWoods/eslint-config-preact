@@ -19,7 +19,8 @@
   },
   "files": [
     "configs",
-    "index.js"
+    "index.js",
+    "README.md"
   ],
   "scripts": {
     "format": "prettier --write .",

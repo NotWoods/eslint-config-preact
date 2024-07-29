@@ -1,7 +1,7 @@
 // @ts-check
 import react from "eslint-plugin-react";
 
-/** @type {import('eslint').Linter.FlatConfig} */
+/** @type {import('eslint').Linter.Config} */
 const config = {
   name: "preact/base",
 
@@ -29,6 +29,7 @@ const config = {
   },
 
   rules: {
+    "react/react-in-jsx-scope": "off", // handled this automatically
     // Legacy APIs not supported in Preact:
     "react/no-deprecated": "error",
     "react/no-did-mount-set-state": "error",

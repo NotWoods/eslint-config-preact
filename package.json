@@ -1,6 +1,7 @@
 {
   "name": "@notwoods/eslint-config-preact",
   "version": "1.0.0",
+  "type": "module",
   "description": "Truly unopinionated base ESLint configuration for Preact projects.",
   "keywords": [
     "eslint",
@@ -11,29 +12,30 @@
   "repository": "NotWoods/eslint-config-preact",
   "license": "MIT",
   "author": "Tiger Oakes",
-  "main": "dist/eslint-config-preact.js",
-  "module": "dist/eslint-config-preact.module.js",
   "exports": {
     ".": {
-      "import": "./dist/eslint-config-preact.module.js",
-      "require": "./dist/eslint-config-preact.js"
+      "import": "./index.js"
     }
   },
   "files": [
-    "configs"
+    "configs",
+    "index.js"
   ],
   "scripts": {
     "format": "prettier --write .",
-    "test": "eslint index.js && npm run -s build && vitest"
+    "test": "eslint && vitest"
   },
   "dependencies": {
     "eslint-plugin-react": "^7.35.0"
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.11",
+    "@eslint/js": "^9.8.0",
+    "@types/eslint": "^9.6.0",
     "@types/node": "^20.0.0",
-    "eslint": "^8.57.0",
-    "prettier": "^3.3.3"
+    "eslint": "^9.8.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.4"
   },
   "peerDependencies": {
     "eslint": ">=8.21.0 < 10"

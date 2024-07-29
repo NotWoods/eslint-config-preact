@@ -1,0 +1,51 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Fixture: 'component' > invalid 1`] = `
+{
+  "errorCount": 1,
+  "fatalErrorCount": 0,
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": [
+    {
+      "column": 5,
+      "endColumn": 18,
+      "endLine": 9,
+      "line": 9,
+      "message": "Do not use setState in componentDidMount",
+      "messageId": "noSetState",
+      "nodeType": "MemberExpression",
+      "ruleId": "react/no-did-mount-set-state",
+      "severity": 2,
+    },
+  ],
+  "source": "import { Component } from "preact";
+
+export class A extends Component {
+  constructor() {
+    super();
+  }
+
+  componentDidMount() {
+    this.setState({});
+  }
+}
+",
+  "suppressedMessages": [],
+  "usedDeprecatedRules": [],
+  "warningCount": 0,
+}
+`;
+
+exports[`Fixture: 'component' > valid 1`] = `
+{
+  "errorCount": 0,
+  "fatalErrorCount": 0,
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": [],
+  "suppressedMessages": [],
+  "usedDeprecatedRules": [],
+  "warningCount": 0,
+}
+`;
